@@ -50,6 +50,8 @@ const swaggerSpec = swaggerJSDoc({
 app.get('/api/v1/users', (req, res) => {
   res.json({ message: 'List of users' });
 });
+
+
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(cookieParser());
